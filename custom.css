@@ -14,7 +14,6 @@ body {
 .vert {
     position: absolute;
     display: flex;
-    
 }
 
 .vert.top {
@@ -25,7 +24,7 @@ body {
     top: 120%;
 }
 
-.vert>p {
+.vert p {
     font-size: 1em;
     text-align: center;
     vertical-align: middle;
@@ -53,7 +52,6 @@ body {
     height: 100px;
     width: 100px;
     background: #656565;
-    
     text-align: center;
     vertical-align: middle;
     line-height: 100px;
@@ -74,7 +72,7 @@ body {
 
 .key.error {
     background: #d33232;
-    border-color: #d33232; 
+    border-color: #d33232;
 }
 
 .action {
