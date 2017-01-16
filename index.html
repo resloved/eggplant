@@ -3,20 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>🍆</title>
+    <!--CSS-->
     <link rel="stylesheet" href="custom.css">
+    <!--Fonts-->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <script src='http://127.0.0.1:9001/js/socket.js'></script> <!--FOR VIMBROWSER-->
-    <script src="keyparse.js"></script>
-    <script src="mapped.js"></script>
-    <script src="keyboard.js"></script>
-    <script src="main.js"></script>
+    <!--VIMBROWSER-->
+    <script src='http://127.0.0.1:9001/js/socket.js'></script>   
 </head>
 <body>
 
     <div id="header">
-        <div class="flex" id="score">
-            -- HEADER --
-        </div>
+        <div class="flex" id="score"></div>
     </div>
 
     <div id="game">
@@ -24,16 +21,22 @@
             <div class="key small"></div>
         </div>
         <div class="flex" id="combo">
-            <div class="key"></div>
+            <div id="icon" class="key">0</div>
             <div class="action">:</div>
-            <div class="key"></div>
-            <div class="key"></div>
-            <div class="key"></div>
-            <div class="key"></div>
-            <div class="key"></div>
         </div>
         
     </div>
-
+    
+    <!--Scripts-->
+    <script src="scripts/util.js"></script>
+    <script src="scripts/const.js"></script>
+    <script src="scripts/keyparse.js"></script>
+    <script src="scripts/stroke.js"></script>
+    <script src="scripts/key.js"></script>
+    <script src="scripts/combo.js"></script>
+    <script src="scripts/mapped.js"></script>
+    <script src="test/keytoscreen.js"></script>
+    <script src="scripts/keyboard.js"></script>
+    <script src="scripts/main.js"></script>
 </body>
 </html>

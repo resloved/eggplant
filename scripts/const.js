@@ -1,5 +1,6 @@
-// .classes
+// #ids
 COMBO = 'combo'
+// .classes
 KEY = 'key'
 SMALL = 'small'
 ACTION = 'action'

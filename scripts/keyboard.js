@@ -1,7 +1,7 @@
-function Keyboard() {
+function Keyboard(toUpdate = []) {
     
     this.active = [];
-    this.toUpdate = [];
+    this.toUpdate = toUpdate;
     
     this.down = function (event) {
         for (var i = 0; i < this.active.length; i++) {

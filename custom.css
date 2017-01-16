@@ -84,12 +84,13 @@ body {
 }
 
 .key.error {
-    background: #d33232;
-    border-color: #d33232;
+    background: #e85151;
+    border-color: #e85151;
 }
 
 .key.complete {
-    color: #efefef
+    color: #efefef;
+    border-color: #efefef;
 }
 
 .action {
