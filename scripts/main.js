@@ -1,6 +1,9 @@
-var combo = new Combo("🍆", ":", 5, document.getElementById(COMBO));
+var combo = new Combo("🍆", ":", 5, document.getEementById(COMBO));
 var kts = new KeyToScreen();
 var keyboard = new Keyboard([combo, kts]);
 
-document.onkeydown = function myFunction(){ keyboard.down(event); };
-document.onkeyup = function myFunction(){ keyboard.up(event); };
+document.addEventListener('keydown', keyboard.down);
+document.addEventListener('keyup', keyboard.up);
+
+// document.onkeydown = function(event) { keyboard.down(event); };
+// document.onkeyup = function(event) { keyboard.up(event); };
