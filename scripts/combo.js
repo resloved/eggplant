@@ -1,12 +1,12 @@
 function Combo(icon, action, keys, location) {
-    
+
     Mapped.call(this);
-    
+
     this.icon = icon;
     this.action = action;
     this.elem = location;
     this.current = 0;
-    
+
     this.createKey = function (letter, location) {
         var elem = document.createElement('div');
         elem.className = KEY;
@@ -15,12 +15,12 @@ function Combo(icon, action, keys, location) {
         location.appendChild(elem);
         return new Key(letter, elem);
     }
-    
+
     this.randomLetter = function () {
         var alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
         return alphabet.charAt(getRandomInt(0, alphabet.length - 1));
     }
-    
+
     this.generate = function (amount) {
         var toReturn = [];
         for (var i = 0; i < amount; i++) {
@@ -29,15 +29,15 @@ function Combo(icon, action, keys, location) {
         toReturn[0].update(KeyState.CURRENT);
         return toReturn;
     }
-    
+
     this.regenerate = function () {
         for (var i = 0; i < this.keys.length; i++) {
             this.keys[i].setLetter(this.randomLetter());
         }
     }
-    
+
     this.keys = this.generate(keys);
-    
+
     this.reset = function () {
         this.keys[0].update(KeyState.CURRENT);
         for (var i = 1; i < this.keys.length; i++) {
@@ -45,7 +45,7 @@ function Combo(icon, action, keys, location) {
         }
         this.current = 0;
     }
-    
+
     this.next = function () {
         if (this.current != this.keys.length - 1) {
             this.keys[this.current].update(KeyState.COMPLETE);
@@ -53,26 +53,24 @@ function Combo(icon, action, keys, location) {
             this.keys[this.current].update(KeyState.CURRENT);
         } else {
             this.complete();
-        }      
+        }
     }
-    
+
     this.complete = function () {
         document.getElementById('icon').innerHTML =
             1 + parseInt(document.getElementById('icon').innerHTML);
         this.reset();
         this.regenerate();
     }
-    
+
     this.update = function (active) {
         if (active.length > 0) {
             if (this.keys[this.current].stroke.solved(active)) {
-                this.next();  
+                this.next();
             } else {
                 this.reset();
-            }   
-        }     
+            }
+        }
     }
-    
-    
 
 }

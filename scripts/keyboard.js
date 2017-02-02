@@ -30,4 +30,5 @@ function Keyboard(toUpdate = []) {
             this.toUpdate[i].update(this.active);
         }
     }
+
 }
