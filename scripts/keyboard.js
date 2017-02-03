@@ -7,17 +7,17 @@ function Keyboard(toUpdate = []) {
 
     this.down = function (event) {
         for (var i = 0; i < this.active.length; i++) {
-            if (this.active[i] === event.keycode) {
+            if (this.active[i] === event.key) {
                 return;
             }
         }
-        this.active.push(event.keycode);
+        this.active.push(event.key);
         this.update();
     }
 
     this.up = function (event) {
         for (var i = 0; i < this.active.length; i++) {
-            if (this.active[i] === event.keycode) {
+            if (this.active[i] === event.key) {
                 this.active.splice(i, 1);
                 this.update();
                 return;

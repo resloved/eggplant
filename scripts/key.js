@@ -1,11 +1,10 @@
 function Key(letter, location, small) {
     
     this.letter = letter;
-    this.code = keyToCode(letter);
     this.elem = location;
-    this.elem.innerHTML = this.letter;
+    this.elem.innerHTML = this.letter.toUpperCase();
     this.state = KeyState.INACTIVE;
-    this.stroke = new Stroke(this.code);
+    this.stroke = new Stroke(this.letter);
     this.small = small;
     
     this.update = function (state) {
@@ -23,9 +22,8 @@ function Key(letter, location, small) {
     
     this.setLetter = function (letter) {
         this.letter = letter;
-        this.code = keyToCode(letter);
-        this.elem.innerHTML = this.letter;
-        this.stroke = new Stroke(this.code);
+        this.elem.innerHTML = this.letter.toUpperCase();
+        this.stroke = new Stroke(this.letter);
     }
     
 }

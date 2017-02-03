@@ -17,7 +17,7 @@ function Combo(icon, action, keys, location) {
     }
 
     this.randomLetter = function () {
-        var alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        var alphabet = "abcdefghijklmnopqrstuvwxyz";
         return alphabet.charAt(getRandomInt(0, alphabet.length - 1));
     }
 
