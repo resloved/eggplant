@@ -16,10 +16,10 @@ function Keyboard(toUpdate = []) {
         this.active = this.active.splice(this.active.indexOf(event.key), 1);
         this.update();
     }
-    
+
     this.toActive = function () {
         this.active.concat(this.pressed);
-        this.pressed = [];        
+        this.pressed = [];
     }
 
     this.update = function () {
