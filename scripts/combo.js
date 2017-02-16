@@ -1,4 +1,4 @@
-function Combo(icon, action, keys, location) {
+function Combo(icon, keys, action, location) {
 
     Mapped.call(this);
 

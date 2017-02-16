@@ -1,5 +1,6 @@
 // #ids
 COMBO = 'combo'
+GAME = 'game'
 // .classes
 KEY = 'key'
 SMALL = 'small'

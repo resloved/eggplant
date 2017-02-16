@@ -1,14 +1,9 @@
-function Key(combo, location, small) {
+function Key(combo, loc, small) {
 
-    this.elem = location;
+    this.elem = loc;
     this.combo = combo;
-    this.elem.innerHTML = this.combo.icon;
+    this.elem.innerHTML = combo.icon;
     this.small = small;
-    this.className(KeyState.INACTIVE);
-
-    this.update = function (state) {
-        this.className(state);
-    }
 
     this.className = function (state) {
         var className = KEY + " " + state;
@@ -17,5 +12,11 @@ function Key(combo, location, small) {
         }
         this.elem.className = className;
     }
+
+    this.update = function (state) {
+        this.className(state);
+    }
+
+    this.className(KeyState.INACTIVE);
 
 }

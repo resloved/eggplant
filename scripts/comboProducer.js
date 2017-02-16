@@ -1,17 +1,25 @@
-function ComboProducer() {
+function ComboProducer(elem) {
+
+    this.elem = elem;
 
     this.randomLetter = function () {
         var alphabet = "abcdefghijklmnopqrstuvwxyz";
         return alphabet.charAt(getRandomInt(0, alphabet.length - 1));
     }
 
+    this.randomSymbol = function () {
+        var symbols = "❤✓☀★☂♞☯☭☢€☎∞❄♫₽";
+        return symbols.charAt(getRandomInt(0, symbols.length - 1));
+    }
+
     this.generate = function (amount) {
-        var toReturn = [];
+        var keys = [];
         for (var i = 0; i < amount; i++) {
-            toReturn.push(this.createKey(this.randomLetter(), this.elem))
+            var letter = this.randomLetter();
+            keys.push(new Combo(letter, [letter]));
         }
-        toReturn[0].update(KeyState.CURRENT);
-        return toReturn;
+        console.log(this.randomSymbol());
+        return new Combo(this.randomSymbol(), keys, ":", elem);
     }
 
 }
