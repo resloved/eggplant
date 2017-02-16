@@ -18,7 +18,6 @@ function ComboProducer(elem) {
             var letter = this.randomLetter();
             keys.push(new Combo(letter, [letter]));
         }
-        console.log(this.randomSymbol());
         return new Combo(this.randomSymbol(), keys, ":", elem);
     }
 
