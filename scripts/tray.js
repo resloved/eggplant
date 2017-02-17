@@ -20,8 +20,7 @@ function Tray(elem) {
 
     this.display = function (combo) {
         this.keys = [];
-        console.log(this.icon);
-        this.icon.innerHtml = "a";
+        this.icon.innerHTML = combo.icon;
         for (var i = 0; i < combo.keys.length; i++) {
             this.keys.push(
                 this.createKey(combo.keys[i], this.elem)
