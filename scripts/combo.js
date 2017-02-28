@@ -26,8 +26,9 @@ function Combo(icon, keys, action, location) {
         }
     }
 
-    this.update = function (active) {
-        if (active.length > 0) {
+    this.update = function (keyboard) {
+        if (keyboard.length > 0) {
+            this.keys[this.current].update(keyboard);
             if (this.keys[this.current].complete) {
                 this.next();
             } else {

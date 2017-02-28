@@ -4,6 +4,7 @@ function Key(combo, loc, small) {
     this.combo = combo;
     this.elem.innerHTML = combo.icon;
     this.small = small;
+    this.state = KeyState.INACTIVE;
 
     this.className = function (state) {
         var className = KEY + " " + state;
@@ -13,8 +14,10 @@ function Key(combo, loc, small) {
         this.elem.className = className;
     }
 
-    this.update = function (state) {
+    this.update = function (keyboard) {
+        state = this.combo.update(keyboard);
         this.className(state);
+        return state;
     }
 
     this.className(KeyState.INACTIVE);

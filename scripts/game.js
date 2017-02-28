@@ -2,7 +2,7 @@ function Game(elem) {
 
     this.elem = elem;
     // TODO - change to within only elem
-    this.tray = new Tray(document.getElementById(COMBO));
+    this.tray = new Tray(document.getElementById(COMBO), 5);
 
     // Contains
     // - Upcoming Combos
